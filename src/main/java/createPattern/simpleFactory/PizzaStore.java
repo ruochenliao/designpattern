@@ -1,7 +1,7 @@
 package createPattern.simpleFactory;
 
 /**
- * 实际使用 factory 的地方
+ * 实际使用 factory 的业务代码
  */
 public class PizzaStore {
     /**
