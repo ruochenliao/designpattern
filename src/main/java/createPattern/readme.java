@@ -6,4 +6,5 @@ package createPattern;
  * 创建型模型分为对象创建型和类创建型模式。对象创建型是把对象创建推迟到另一个类中去创建，类创建型是把对象创建推迟到子类中进行创建。
  */
 public class readme {
+
 }
