@@ -1,9 +1,0 @@
-@startuml
-
-Class11 <|.. Class12:实现
-Class13 <.. Class14:依赖
-Class15 *.. Class16
-Class17 o.. Class18
-Class19 .. Class20
-
-@enduml

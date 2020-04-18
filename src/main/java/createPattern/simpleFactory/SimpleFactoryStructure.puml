@@ -1,0 +1,12 @@
+@startuml
+'Class11 <|.. Class12
+'Class13 --> Class14
+'Class15 ..> Class16
+'Class17 ..|> Class18
+'Class19 <--* Class20
+
+ProductA ..|> Product : 实现
+ProductB ..|> Product
+SimpleFactory ..> ProductA : 依赖
+SimpleFactory ..> ProductB
+@enduml

@@ -1,0 +1,6 @@
+@startuml
+PizzaStore --> SimplePizzaFactory : 关联
+SimplePizzaFactory --> Pizza
+Pizza <|-- VegPizza: 继承
+Pizza <|-- MeatPizza: 继承
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+class PizzaStore{
+    +orderPizza(): 根据是否可复用决定放在父类还是实体类中
+    +createPizza()
+}
+class ChicagoPizzaStore{
+    +createPizza()
+}
+
+class LosAngelesPizzaStore{
+    +createPizza()
+}
+
+VegetablePizza ..|> Pizza : 实现
+
+MeatPizza ..|> Pizza : 实现
+
+ChicagoPizzaStore ..|> PizzaStore : 实现
+
+LosAngelesPizzaStore ..|> PizzaStore : 实现
+
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+
+ConcreteProduct ..|> Product : 实现
+
+ConcreteFactory ..|> Factory : 实现
+
+ConcreteProduct <.. ConcreteFactory : 依赖
+
+@enduml
