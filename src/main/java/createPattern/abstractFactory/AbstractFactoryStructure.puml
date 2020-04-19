@@ -1,0 +1,21 @@
+@startuml
+
+Factory1 ..|> AbstractFactory
+Factory2 ..|> AbstractFactory
+
+ProductA1 ..|> AbstractProductA
+ProductA2 ..|> AbstractProductA
+
+ProductB1 ..|> AbstractProductB
+ProductB2 ..|> AbstractProductB
+
+'client ..> AbstractFactory
+'client ..> AbstractProductA
+'client ..> AbstractProductB
+
+Factory1 ..> ProductA1
+Factory1 ..> ProductB1
+
+Factory2 ..> ProductA2
+Factory2 ..> ProductB2
+@enduml

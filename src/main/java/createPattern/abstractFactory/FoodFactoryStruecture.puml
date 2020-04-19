@@ -1,0 +1,11 @@
+@startuml
+
+HotPizza --|> Pizza
+ColdPizza --|> Pizza
+
+HotMilk --|> Milk
+ColdMilk --|> Milk
+
+HotFoodFactory --|> Factory
+ColdFoodFactory --|> Factory
+@enduml
