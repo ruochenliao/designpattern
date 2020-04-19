@@ -8,4 +8,10 @@ ColdMilk --|> Milk
 
 HotFoodFactory --|> Factory
 ColdFoodFactory --|> Factory
+
+'HotFoodFactory ..> HotMilk
+'HotFoodFactory ..> HotPizza
+'
+'ColdFoodFactory ..> ColdMilk
+'ColdFoodFactory ..> ColdPizza
 @enduml
