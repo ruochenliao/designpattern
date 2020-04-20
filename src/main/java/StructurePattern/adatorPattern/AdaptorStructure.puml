@@ -1,0 +1,14 @@
+@startuml
+
+class Target{
+    +request();
+}
+
+class Adaptor{
+    +request();
+}
+
+Adaptor ..|> Target
+Adaptor --> Adaptee
+
+@enduml
