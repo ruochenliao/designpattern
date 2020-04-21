@@ -1,6 +1,6 @@
 package StructurePattern.adatorPattern;
 
-public class CarFactoryImpl implements CarFactory{
+public class AudiCarFactoryImpl implements CarFactory{
     public Car createCar() {
         Car c = new Car();
         c.setColor("red");
