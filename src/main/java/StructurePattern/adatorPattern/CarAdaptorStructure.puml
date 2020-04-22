@@ -1,0 +1,27 @@
+@startuml
+
+class CarAdaptor{
+    +changeColor();
+}
+class CarObjectAdaptor{
+    +changeColor();
+}
+
+class BenzCarFactoryImpl{
+    +createCar();
+}
+class AudiCarFactoryImpl{
+    +createCar();
+}
+class BMWCarFactoryImpl{
+    +createCar();
+}
+
+CarAdaptorImpl --|> BenzCarFactoryImpl
+CarAdaptorImpl --> CarAdaptor
+
+CarObjectAdaptor o-- AudiCarFactoryImpl
+CarObjectAdaptor o-- BMWCarFactoryImpl
+CarObjectAdaptor --> CarAdaptor
+
+@enduml

@@ -6,7 +6,7 @@ package StructurePattern.adatorPattern;
  *
  * 通过继承 CarFactoryImpl 拥有 createCar 的能力
  */
-public class CarAdaptorImpl extends AudiCarFactoryImpl implements CarAdaptor{
+public class CarAdaptorImpl extends BenzCarFactoryImpl implements CarAdaptor{
 
     public Car changeColor(Car car, String color) {
         car.setColor(color);

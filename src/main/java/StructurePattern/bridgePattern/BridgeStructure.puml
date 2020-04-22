@@ -1,0 +1,17 @@
+@startuml
+
+class Implementor{
+    +operate();
+}
+
+class Abstraction{
+    -Implementor
+    +doSomething()
+}
+
+concreteImplementorA ..|> Implementor
+concreteImplementorB ..|> Implementor
+
+Impl --> Abstraction
+Abstraction o-- Implementor
+@enduml
