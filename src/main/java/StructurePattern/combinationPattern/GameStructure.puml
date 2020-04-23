@@ -1,0 +1,36 @@
+@startuml
+class CS{
+    +display();
+}
+
+class DOTA{
+    +display();
+}
+
+class LOL{
+    +display();
+}
+
+class GameWebsite{
+    +display();
+    +add();
+    +remove();
+}
+
+class Game{
+    +display();
+}
+note top of GameWebsite
+operation(){
+    for(Game game:children){
+        game.display()
+     }
+ }
+end note
+
+CS ..|> Game
+DOTA ..|> Game
+LOL ..|> Game
+GameWebsite ..|> Game
+GameWebsite o--> Game : 1:n
+@enduml

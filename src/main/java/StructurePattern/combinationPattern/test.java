@@ -8,5 +8,26 @@ package StructurePattern.combinationPattern;
  * 叶子对象和组合对象实现相同的接口，这就是组合模式能将叶子节点和对象节点能够进行一致处理的原因
  */
 public class test {
+    public static void main(String[] args){
+        GameWebsite gameStore = new GameWebsite("游戏网站");
+        CS cs = new CS("CS");
+        Dota dota = new Dota("DOTA");
+        LOL lol = new LOL("LOL");
 
+        GameWebsite gameWebsite1 = new GameWebsite("所有游戏");
+        GameWebsite gameWebsite2  = new GameWebsite("角色扮演游戏");
+
+        gameWebsite1.add(cs);
+        gameWebsite2.add(dota);
+        gameWebsite2.add(lol);
+        gameWebsite1.add(gameWebsite2);
+
+        System.out.println(gameWebsite1.name);
+        gameWebsite1.display();
+        System.out.println();
+
+
+        System.out.println(gameWebsite2.name);
+        gameWebsite2.display();
+    }
 }

@@ -4,7 +4,8 @@ class leaf{
    +operation();
 }
 
-class component{
+class component
+{
     +operation();
     +add();
     +remove();
@@ -18,8 +19,16 @@ class composite{
     +getChild();
 }
 
+class composite
+note top of composite
+operation(){
+    for(Component component:children){
+        component.operation()
+     }
+ }
+end note
 leaf --|> component
 composite --|> component
-composite o..> component
+composite o--> component :children
 
 @enduml
