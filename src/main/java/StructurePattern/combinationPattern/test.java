@@ -14,6 +14,7 @@ public class test {
         Dota dota = new Dota("DOTA");
         LOL lol = new LOL("LOL");
 
+        //gameWebsite1 可以 add 叶子，也可以 add 部分
         GameWebsite gameWebsite1 = new GameWebsite("所有游戏");
         GameWebsite gameWebsite2  = new GameWebsite("角色扮演游戏");
 

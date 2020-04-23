@@ -3,6 +3,12 @@ package StructurePattern.combinationPattern;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 这是个容器
+ * 这个容器为什么要继承 Game 类？
+ * 因为这样可以对不管是整体还是部分进行一个完善的管理
+ *
+ */
 public class GameWebsite extends Game{
 
     private List<Game> gameList;
