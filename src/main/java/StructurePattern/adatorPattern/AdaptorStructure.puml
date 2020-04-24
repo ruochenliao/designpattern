@@ -4,11 +4,15 @@ class Target{
     +request();
 }
 
-class Adaptor{
+class AdaptorImpl{
     +request();
 }
 
-Adaptor ..|> Target
-Adaptor --> Adaptee
+class Adaptor{
+    +newOperate();
+}
+
+AdaptorImpl ..|> Target
+AdaptorImpl --> Adaptor
 
 @enduml
