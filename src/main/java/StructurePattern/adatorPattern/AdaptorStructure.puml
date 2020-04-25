@@ -4,15 +4,16 @@ class Target{
     +request();
 }
 
-class AdaptorImpl{
+class Adaptor{
     +request();
 }
 
-class Adaptor{
-    +newOperate();
+class Adaptee{
+    +specificRequest();
 }
 
-AdaptorImpl ..|> Target
-AdaptorImpl --> Adaptor
-
+Adaptor ..|> Target
+Adaptor --> Adaptee
+client --> Adaptor: 新
+client --> Target: 老
 @enduml
