@@ -1,0 +1,31 @@
+@startuml
+
+class Component{
+    +operate();
+}
+
+class ConcreteComponent{
+    +operate();
+}
+
+class Decerator{
+    -Component component
+    +operate();
+}
+
+class ConcreteDeceratorA{
+    +ConcreteDeceratorA(Cmponent c);
+    +operate();
+}
+
+class ConcreteDeceratorB{
+    +ConcreteDeceratorB(Cmponent c);
+    +operate();
+}
+
+ConcreteComponent --|> Component
+Decerator --|> Component
+Decerator o--> Component
+ConcreteDeceratorA --|> Decerator
+ConcreteDeceratorB --|> Decerator
+@enduml

@@ -1,11 +1,19 @@
 package StructurePattern.combinationPattern;
 
 /**
+ * 使用场景
+ * 常用来做目录
+ *
+ * 定义
  * 组合模式组合多个对象形成树形结构以表示"整体-部分"的结构层次
  *
  * 由也子节点(简单结构)组合成树(复杂结构)
  *
  * 叶子对象和组合对象实现相同的接口，这就是组合模式能将叶子节点和对象节点能够进行一致处理的原因
+ *
+ * 优点
+ * 可以清晰地定义分层次的复杂对象
+ * 不断递归下去，可以形成复杂树形结构
  */
 public class test {
     public static void main(String[] args){
