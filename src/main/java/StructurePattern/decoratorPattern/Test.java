@@ -10,4 +10,26 @@ package StructurePattern.decoratorPattern;
  *
  */
 public class Test {
+
+    //建立 main 函数快速方法， psvm
+    public static void main(String[] args) {
+        System.out.println("打印原味 cake");
+        CakeImpl originalCake = new CakeImpl();
+        String originalCakeName = originalCake.nameDetail();
+        Double originalCakePrice = originalCake.price();
+        System.out.println(originalCakeName);
+        System.out.println(originalCakePrice);
+
+        System.out.println();
+
+        System.out.println("打印组合 cake");
+        EggCakeDecorator eggCake = new EggCakeDecorator(originalCake);
+        MilkCakeDecorator milkCake = new MilkCakeDecorator(eggCake);
+        MeatCakeDecorator meatCake = new MeatCakeDecorator(milkCake);
+        String compositeName = meatCake.nameDetail();
+        Double compositePrice = meatCake.price();
+        //答应出 肉类牛奶鸡蛋原味蛋糕
+        System.out.println(compositeName);
+        System.out.println(compositePrice);
+    }
 }
