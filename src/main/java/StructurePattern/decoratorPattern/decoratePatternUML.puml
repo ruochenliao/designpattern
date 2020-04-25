@@ -28,4 +28,5 @@ Decerator --|> Component
 Decerator o--> Component
 ConcreteDeceratorA --|> Decerator
 ConcreteDeceratorB --|> Decerator
+
 @enduml

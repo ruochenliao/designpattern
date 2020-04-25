@@ -2,7 +2,7 @@ package StructurePattern.combinationPattern;
 
 /**
  * 使用场景
- * 常用来做目录
+ * 树形结构，比如常用来做目录
  *
  * 定义
  * 组合模式组合多个对象形成树形结构以表示"整体-部分"的结构层次

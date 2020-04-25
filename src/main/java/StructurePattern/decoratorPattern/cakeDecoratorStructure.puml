@@ -1,0 +1,44 @@
+@startuml
+
+interface Cake{
+    nameDetail();
+    price();
+}
+
+abstract class CakeDecorator{
+    -Cake cake
+    +CakeDecorator(Cake cake);
+    +nameDetail();
+    +price();
+}
+
+class CakeImpl{
+    +nameDetail();
+    +price();
+}
+
+class EggCakeDecorator{
+    +EggCakeDecorator(Cake cake);
+    +nameDetail();
+    +price();
+}
+
+class MeatCakeDecorator{
+    +MeatCakeDecorator(Cake cake);
+    +nameDetail();
+    +price();
+}
+
+class MilkCakeDecorator{
+    +MilkCakeDecorator(Cake cake);
+    +nameDetail();
+    +price();
+}
+
+CakeImpl ..|> Cake
+CakeDecorator ..|> Cake
+EggCakeDecorator --|> CakeDecorator
+MeatCakeDecorator --|> CakeDecorator
+MilkCakeDecorator --|> CakeDecorator
+
+@enduml
