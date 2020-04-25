@@ -3,7 +3,7 @@ package StructurePattern.adatorPattern;
 /**
  * Adaptor
  * 实现一个 typeC 转 VGA 适配器
- * 通过组合方式实现适配器功能
+ * 通过组合方式实现对象适配器
  */
 public class Typec2Vga2 implements Vga {
     private Iphone iphone;

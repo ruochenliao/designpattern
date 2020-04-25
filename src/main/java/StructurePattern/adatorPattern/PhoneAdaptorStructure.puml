@@ -1,0 +1,33 @@
+@startuml
+class Iphone{
+    typecPhone();
+}
+class Typec2Vga1{
+    vgaInterface();
+}
+
+note top of Typec2Vga1
+    类的适配器模式
+end note
+
+class Typec2Vga2{
+    vgaInterface();
+}
+
+note top of Typec2Vga2
+    对象适配器模式
+end note
+
+interface Vga{
+    vgaInterface();
+}
+
+
+
+Typec2Vga1 --|> Iphone
+Typec2Vga1 ..|> Vga
+
+
+Typec2Vga2 ..|> Vga
+Typec2Vga2 o-- Iphone
+@enduml
