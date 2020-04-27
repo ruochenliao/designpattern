@@ -1,0 +1,9 @@
+@startuml
+
+Client ..> Facade
+
+Facade ..> SubsystemA
+Facade ..> SubsystemB
+Facade ..> SubsystemC
+
+@enduml
