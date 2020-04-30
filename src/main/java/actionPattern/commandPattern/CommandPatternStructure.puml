@@ -1,0 +1,27 @@
+@startuml
+
+class Receiver{
+    +action1();
+    +action2();
+}
+class Invoker{
+    +setCommand();
+}
+class Command{
+    +execute();
+}
+class ConcreteCommand{
+    +execute();
+}
+note top of Invoker
+    命令的发起者
+    用来设置具体的命令
+end note
+
+'Client ..> Receiver
+'Client ..> ConcreteCommand
+ConcreteCommand ..> Receiver
+ConcreteCommand ..|> Command
+Invoker --> Command
+
+@enduml
