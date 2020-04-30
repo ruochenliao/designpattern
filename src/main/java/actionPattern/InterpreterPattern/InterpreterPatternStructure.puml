@@ -12,6 +12,10 @@ note top of NonTerminalExpression
     解释中间符号的，比如加减乘除的
 end note
 
+note top of Context
+    存储加减符号以及数字，以便计算之前的存储
+end note
+
 TerminalExpression --|> AbstractExpression
 NonTerminalExpression --|> AbstractExpression
 NonTerminalExpression o--> AbstractExpression

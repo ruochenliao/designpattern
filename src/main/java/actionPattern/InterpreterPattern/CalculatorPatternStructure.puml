@@ -1,0 +1,47 @@
+@startuml
+
+interface Node{
+    +interpret();
+}
+class ValueNode{
+    +interpret();
+}
+
+class SymbolNode{
+    -Node left;
+    -Node right;
+    +SymbolNode(left, right);
+}
+class MulNode{
+    +MulNode(left, right);
+    +interpret();
+}
+
+class ModNode{
+    +ModNode(left, right);
+    +interpret();
+}
+
+class DivNode{
+    +DivNode(left, right);
+    +interpret();
+}
+
+class Calculator{
+    -String statement;
+    -Node node;
+    +build(String statement);
+    +compute();
+}
+
+MulNode --|> SymbolNode
+ModNode --|> SymbolNode
+DivNode --|> SymbolNode
+ValueNode ..|> Node
+SymbolNode ..|> Node
+SymbolNode o-- Node
+Calculator --> Node
+Client --> Calculator
+
+
+@enduml
