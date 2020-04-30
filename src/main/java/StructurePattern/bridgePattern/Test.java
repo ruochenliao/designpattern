@@ -1,7 +1,14 @@
 package StructurePattern.bridgePattern;
 
 /**
+ * 桥接模式
+ *
+ * 应用
+ * 桥接属性，构建不同维度的对象
+ *
  * 桥接模式和剪造型模式配合
+ *
+ *
  *
  */
 public class Test {

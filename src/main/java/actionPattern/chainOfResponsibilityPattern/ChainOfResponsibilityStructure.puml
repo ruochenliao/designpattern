@@ -1,0 +1,20 @@
+@startuml
+
+class Handler{
+    -Handler successor
+    +handleRequest();
+}
+
+class ConcreteHandlerA{
+    +handleRequest();
+}
+
+class ConcreteHandlerB{
+    +handleRequest();
+}
+
+ConcreteHandlerA --|> Handler
+ConcreteHandlerB --|> Handler
+Handler o--> Handler
+Client ..> Handler
+@enduml

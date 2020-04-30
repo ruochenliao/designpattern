@@ -1,0 +1,27 @@
+@startuml
+class Proxy{
+    -RealSubject realSubject
+    +preRequest();
+    +request();
+    +afterRequest();
+}
+
+interface Subject{
+    +request();
+}
+
+class RealSubject{
+    +request();
+}
+
+Proxy ..|> Subject
+RealSubject ..|> Subject
+Proxy --> RealSubject
+Client ..> Proxy
+
+note right of RealSubject
+ 代理对象与真实对象继承同一个接口，
+ 通过前插入和后插入控制对象
+end note
+
+@enduml
