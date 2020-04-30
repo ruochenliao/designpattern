@@ -1,0 +1,21 @@
+@startuml
+
+class AbstractExpression{
+    +interpret();
+}
+
+note top of TerminalExpression
+    解释结果的
+end note
+
+note top of NonTerminalExpression
+    解释中间符号的，比如加减乘除的
+end note
+
+TerminalExpression --|> AbstractExpression
+NonTerminalExpression --|> AbstractExpression
+NonTerminalExpression o--> AbstractExpression
+Client --> Context
+Client --> AbstractExpression
+
+@enduml
