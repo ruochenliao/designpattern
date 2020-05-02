@@ -10,6 +10,9 @@ package actionPattern.StatePattern;
  * 优点
  * 封装了转换规则，状态模式替代了 if else 状态的判断
  *
+ * 缺点
+ * 状态模式对开闭原则支持不是很好
+ *
  */
 public class Test {
     public static void main(String[] args) {
