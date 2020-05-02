@@ -1,0 +1,12 @@
+@startuml
+State Idle: 空闲
+State Booked :已预订
+State CheckIn: 已入住
+
+Idle --> Booked: 预订
+Booked -> Idle: 取消预订
+Idle -> CheckIn: 入住
+CheckIn -> Idle: 取消
+Booked -> CheckIn: 登记
+
+@enduml

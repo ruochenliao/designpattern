@@ -1,0 +1,30 @@
+@startuml
+
+class State{
+    +handle();
+}
+
+class ConcreteA{
+    +handle();
+}
+class ConcreteB{
+    +handle();
+}
+
+class Context{
+    -State state;
+    +request();
+    +setState();
+}
+
+note top of Context
+    环境类
+    可以包含一些内部状态
+end note
+
+ConcreteA --|> State
+ConcreteB --|> State
+
+Context o-- State : state
+
+@enduml
