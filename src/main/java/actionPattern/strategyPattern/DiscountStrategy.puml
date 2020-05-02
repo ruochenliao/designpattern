@@ -1,0 +1,18 @@
+@startuml
+
+interface IDiscount{
+    +calculate();
+}
+
+class DiscountRoom{
+    -price;
+    -discount;
+    +getPrice();
+}
+
+StudentDiscount ..|> IDiscount
+ChildrenDiscount ..|> IDiscount
+VIPDsicount ..|> IDiscount
+DiscountRoom o--> IDiscount
+
+@enduml
