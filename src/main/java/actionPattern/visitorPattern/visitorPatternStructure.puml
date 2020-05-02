@@ -1,0 +1,39 @@
+@startuml
+
+interface Visitor{
+    +visitConcreteElementA(ConcreteElementA elementA);
+    +visitConcreteElementB(ConcreteElementB elementB);
+}
+
+package ObjectStructure{
+    interface Element{
+        +accept(Visitor visitor);
+    }
+    class ConcreteElementA
+    class ConcreteElementB
+    class ObjectStructure
+}
+
+note bottom of Visitor{
+    抽象访问者
+}
+
+note left of Element{
+    抽象元素 = 属性，比如收入
+}
+
+note bottom of ObjectStructure{
+    表示对象整体的抽象结构
+    并且提供高层的接口给 client 访问
+}
+
+
+ConcreteVisitorA ..|> Visitor
+ConcreteVisitorB ..|> Visitor
+Client --> Visitor
+Client --> ObjectStructure
+ObjectStructure --> Element
+ConcreteElementA ..|> Element
+ConcreteElementB ..|> Element
+
+@enduml
