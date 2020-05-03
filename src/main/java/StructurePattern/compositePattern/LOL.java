@@ -1,4 +1,4 @@
-package StructurePattern.combinationPattern;
+package StructurePattern.compositePattern;
 
 public class LOL extends Game{
 

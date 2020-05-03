@@ -22,7 +22,6 @@ public class BossVisitor implements Visitor {
      * @param consumeBill
      */
     public void view(ConsumeBill consumeBill) {
-        //todo 查看所有账单总和
         totalConsume += consumeBill.getAmount();
     }
 
@@ -31,7 +30,6 @@ public class BossVisitor implements Visitor {
      * @param incomeBill
      */
     public void view(IncomeBill incomeBill) {
-        //todo 查看所有账单总和
         totalIncome += incomeBill.getAmount();
     }
 }

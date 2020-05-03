@@ -1,4 +1,4 @@
-package StructurePattern.combinationPattern;
+package StructurePattern.compositePattern;
 
 /**
  * 使用场景

@@ -1,4 +1,4 @@
-package StructurePattern.combinationPattern;
+package StructurePattern.compositePattern;
 
 import lombok.Data;
 

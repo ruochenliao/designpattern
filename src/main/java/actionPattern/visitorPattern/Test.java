@@ -10,6 +10,14 @@ package actionPattern.visitorPattern;
  * 定义
  * 访问者对某个对象的各个元素操作，在不改变各个元素的前提下，定义作用于这些元素的新操作
  *
+ * 优点
+ * 将对象访问行为集中到一个访问者对象中，而不是分散到一个个元素类里
+ *
+ * 缺点
+ * 增加新的元素很困难
+ * 破快封装，不满足开闭原则
+ * 因为 visitor 里需要对每个元素进行处理，所以 visitor 里的方法个数直接与元素的具体个数相关
+ * 比较难理解
  */
 public class Test {
     public static void main(String[] args) {

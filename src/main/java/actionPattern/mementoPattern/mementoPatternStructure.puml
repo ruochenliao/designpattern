@@ -1,0 +1,35 @@
+@startuml
+
+class Memento{
+    -state;
+    +getState();
+    +setState();
+}
+
+
+class Original{
+    -state;
+    +restoreMemento(Memento m);
+    +createMemento();
+}
+
+note top of Original{
+    原发器
+    用于创建一个备忘录，用以记录当前状态。
+    如游戏的当前状态，可以被恢复的状态
+}
+note left of Memento{
+    备忘录
+    用于存储 Original 的内部状态
+}
+
+note top of Caretaker{
+    负责人
+    负责保存好备忘录
+    不能对备忘录内容进行操作，只能将备忘录传递给其他对象
+}
+
+Original ..> Memento
+Caretaker o--> Memento: memento
+
+@enduml
