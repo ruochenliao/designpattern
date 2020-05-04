@@ -1,0 +1,27 @@
+@startuml
+
+abstract class Flyweight{
+    +operation();
+}
+
+class FlyweightFactory{
+    +getFlyweight(key);
+}
+
+note top of ConcreteFlyweight{
+    指定内部状态（内部共享资源）
+    为内部状态增加存储空间
+}
+note top of UnsharedConcreteFlyweight{
+    指定外部状态（不可以共享的资源）
+}
+
+
+ConcreteFlyweight --|> Flyweight
+UnsharedConcreteFlyweight --|> Flyweight
+FlyweightFactory o--> Flyweight
+Client --> FlyweightFactory: +flyweights
+Client --> ConcreteFlyweight
+Client --> UnsharedConcreteFlyweight
+
+@enduml

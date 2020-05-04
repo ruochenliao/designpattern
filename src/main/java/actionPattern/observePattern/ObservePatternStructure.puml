@@ -1,0 +1,16 @@
+@startuml
+
+
+class Subject{
+    +registerObservers();
+    +removeObserver();
+    +notifyObservers();
+}
+
+class Observer{
+    +update();
+}
+
+Subject ..> Observer
+
+@enduml
