@@ -10,10 +10,9 @@ public class CapFactory {
     /**
      * 享元池
      */
-    private static Map<String, BottleCap> map = new HashMap<String, BottleCap>();
+    private static Map<String, BottleCap> map = new HashMap<>();
 
     /**
-     *
      * @param color
      * @param bottleCap
      * @return
