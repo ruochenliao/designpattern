@@ -1,5 +1,8 @@
 package StructurePattern.FlyweightPattern;
 
+import com.alibaba.fastjson.JSON;
+import sun.jvm.hotspot.HelloWorld;
+
 /**
  * FleightFactory 享元模式
  *
@@ -21,6 +24,7 @@ package StructurePattern.FlyweightPattern;
  * 需要区分内部状态，外部状态，增加了程序复杂度
  */
 public class Test {
+
     public static void main(String[] args) {
         //简单享元模式,只考虑内部共享区域
         BottleCap cap1 = CapFactory.getBottleCap("red", null);
