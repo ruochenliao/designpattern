@@ -1,10 +1,10 @@
-package StructurePattern.FlyweightPattern.local.cahche;
+package StructurePattern.FlyweightPattern.login.user;
 
 import java.util.Arrays;
 
 /**
- * 本地缓存存储键值对
- * 获取缓存的时候需要拿到一个 UUID 作为获取这个缓存的唯一标识符
+ * 用户登录的时候，等级员工信息
+ * 工号和员工的权限是不变的，放在共享池中，变化的是员工的审批链接
  */
 public class Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package StructurePattern.FlyweightPattern.local.cahche;
+package StructurePattern.FlyweightPattern.login.user;
 
 import java.util.List;
 
