@@ -8,20 +8,25 @@ package createPattern.abstractFactory;
  */
 public class HotFoodFactory implements Factory{
 
-    public Pizza createPizza() {
-        HotPizza hotPizza = new HotPizza();
-        hotPizza.prepare();
-        hotPizza.bake();
-        hotPizza.bake();
-        hotPizza.box();
-        return hotPizza;
+    public Pizza createPizza(String type) {
+        if(type.equals("vegetable")){
+            PizzaVeg vegPizza = new PizzaVeg();
+            vegPizza.prepare();
+            vegPizza.bake();
+            vegPizza.box();
+            return vegPizza;
+        }
+        return null;
     }
 
-    public Milk createMilk() {
-        HotMilk hotMilk = new HotMilk();
-        hotMilk.prepare();
-        hotMilk.cook();
-        hotMilk.bottle();
-        return hotMilk;
+    public Milk createMilk(String type) {
+        if(type.equals("apple")){
+            AppleMilk appleMilk = new AppleMilk();
+            appleMilk.prepare();
+            appleMilk.cook();
+            appleMilk.bottle();
+            return appleMilk;
+        }
+        return null;
     }
 }

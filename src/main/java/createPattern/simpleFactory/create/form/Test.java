@@ -2,14 +2,11 @@ package createPattern.simpleFactory.create.form;
 
 public class Test {
     public static void main(String[] args) {
-        FormFactory formFactory = new FormFactory();
+        //注入 formService
+        FormService formService = new FormService();
         //创建更换申请单
         ExchangeApplication exchangeApplication = buildApplication();
-        Form form = formFactory.createForm("exchangeForm");
-        form.check(exchangeApplication);
-        form.createAudit(exchangeApplication);
-        form.saveForm(exchangeApplication);
-        form.createTask(exchangeApplication);
+        formService.submitForm(exchangeApplication);
     }
 
     private static ExchangeApplication buildApplication() {
@@ -18,7 +15,7 @@ public class Test {
         exchangeApplication.setReceiveLocation("阿里巴巴西溪");
         exchangeApplication.setReturnAssetCode("TD138748947234");
         exchangeApplication.setReturnLocation("蚂蚁Z空间");
-        exchangeApplication.setFormType("exchange");
+        exchangeApplication.setFormType("exchangeForm");
         exchangeApplication.setApplicant("Nebula");
         exchangeApplication.setReason("测试");
         return exchangeApplication;

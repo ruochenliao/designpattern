@@ -8,21 +8,21 @@ public class Store {
         if ("pizza".equals(foodType)) {
             if ("cold".equals(temperatureLevel)) {
                 ColdFoodFactory coldFoodFactory = new ColdFoodFactory();
-                Pizza pizza = coldFoodFactory.createPizza();
+                Pizza pizza = coldFoodFactory.createPizza(materialType);
             }
             if ("hot".equals(temperatureLevel)) {
                 HotFoodFactory hotFoodFactory = new HotFoodFactory();
-                Pizza pizza = hotFoodFactory.createPizza();
+                Pizza pizza = hotFoodFactory.createPizza(materialType);
             }
         }
         if ("milk".equals(foodType)) {
             if("cold".equals(temperatureLevel)){
                 ColdFoodFactory coldFoodFactory = new ColdFoodFactory();
-                Milk milk = coldFoodFactory.createMilk();
+                Milk milk = coldFoodFactory.createMilk(materialType);
             }
             if("hot".equals(temperatureLevel)){
                 HotFoodFactory hotFoodFactory = new HotFoodFactory();
-                Milk milk = hotFoodFactory.createMilk();
+                Milk milk = hotFoodFactory.createMilk(materialType);
             }
         }
 

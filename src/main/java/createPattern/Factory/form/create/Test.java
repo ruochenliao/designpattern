@@ -4,15 +4,15 @@ public class Test {
     public static void main(String[] args) {
         //创建阿里巴巴更换申请单
         ExchangeApplication exchangeApplication = buildApplication();
-        AlibabaFormService alibabaFormService = new AlibabaFormService();
+        AlibabaFormFactory alibabaFormFactory = new AlibabaFormFactory();
         //提交申请单
-        alibabaFormService.submitForm(exchangeApplication);
+        alibabaFormFactory.submitForm(exchangeApplication);
         System.out.println();
 
         //创建腾讯领用申请单
         ReceiveApplication receiveForm = buildReceiveApplication();
-        TencentFormService tencentFormService = new TencentFormService();
-        tencentFormService.submitForm(receiveForm);
+        TencentFormFactory tencentFormFactory = new TencentFormFactory();
+        tencentFormFactory.submitForm(receiveForm);
     }
 
     private static ReceiveApplication buildReceiveApplication() {

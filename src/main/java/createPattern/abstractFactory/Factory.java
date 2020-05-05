@@ -27,11 +27,11 @@ public interface Factory {
      * pizza 是一个族类
      * @return
      */
-    Pizza createPizza();
+    Pizza createPizza(String type);
 
     /**
      * Milk 是一个族类
      * @return
      */
-    Milk createMilk();
+    Milk createMilk(String type);
 }
