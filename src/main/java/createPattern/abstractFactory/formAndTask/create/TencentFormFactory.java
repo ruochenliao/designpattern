@@ -1,6 +1,6 @@
 package createPattern.abstractFactory.formAndTask.create;
 
-public class AlibabaFormFactory implements Factory {
+public class TencentFormFactory implements Factory {
     @Override
     public void createForm(Application application) {
         if ("receive".equals(application.getFormType())) {
@@ -24,13 +24,15 @@ public class AlibabaFormFactory implements Factory {
             Task receiveTask = new ReceiveTask();
             receiveTask.check(taskDTO);
             receiveTask.saveTask(taskDTO);
-            receiveTask.sendMessage(taskDTO);
+            //腾讯不需要发送消息
+//            receiveTask.sendMessage(taskDTO);
         }
         if ("return".equals(taskDTO.getTaskType())) {
             Task returnTask = new ReturnTask();
             returnTask.check(taskDTO);
             returnTask.saveTask(taskDTO);
-            returnTask.sendMessage(taskDTO);
+            //腾讯不需要发送消息
+//            returnTask.sendMessage(taskDTO);
         }
     }
 }

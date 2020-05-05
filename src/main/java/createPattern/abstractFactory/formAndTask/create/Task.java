@@ -1,8 +1,7 @@
 package createPattern.abstractFactory.formAndTask.create;
 
-import lombok.Data;
-
-@Data
-public class Task {
-    private String taskId;
+public interface Task {
+    Boolean check(TaskDTO taskDTO);
+    void saveTask(TaskDTO taskDTO);
+    void sendMessage(TaskDTO taskDTO);
 }
