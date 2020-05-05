@@ -4,6 +4,7 @@ public class AlibabaFormFactory implements Factory {
     @Override
     public void createForm(Application application) {
         if ("receive".equals(application.getFormType())) {
+            System.out.println("开始创建领用申请单");
             ReceiveForm receiveForm = new ReceiveForm();
             receiveForm.check(application);
             receiveForm.createAudit(application);
@@ -11,6 +12,7 @@ public class AlibabaFormFactory implements Factory {
             receiveForm.saveForm(application);
         }
         if ("exchange".equals(application.getFormType())) {
+            System.out.println("开始创建更换申请单");
             ExchangeForm exchangeForm = new ExchangeForm();
             exchangeForm.check(application);
             exchangeForm.createTask(application);

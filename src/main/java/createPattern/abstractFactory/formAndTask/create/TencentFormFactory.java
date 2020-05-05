@@ -6,7 +6,8 @@ public class TencentFormFactory implements Factory {
         if ("receive".equals(application.getFormType())) {
             ReceiveForm receiveForm = new ReceiveForm();
             receiveForm.check(application);
-            receiveForm.createAudit(application);
+            //腾讯不需要走审批
+//            receiveForm.createAudit(application);
             receiveForm.createTask(application);
             receiveForm.saveForm(application);
         }

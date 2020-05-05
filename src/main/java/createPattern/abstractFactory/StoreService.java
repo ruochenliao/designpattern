@@ -3,7 +3,7 @@ package createPattern.abstractFactory;
 /**
  * 实物的消费场所
  */
-public class Store {
+public class StoreService {
     public void consume(String foodType, String temperatureLevel, String materialType) {
         if ("pizza".equals(foodType)) {
             if ("cold".equals(temperatureLevel)) {

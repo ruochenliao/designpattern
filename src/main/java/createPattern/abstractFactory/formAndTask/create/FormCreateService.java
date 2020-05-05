@@ -6,5 +6,9 @@ public class FormCreateService {
             AlibabaFormFactory alibabaFormFactory = new AlibabaFormFactory();
             alibabaFormFactory.createForm(application);
         }
+        if("tencent".equals(application.getTenant())){
+            TencentFormFactory tencentFormFactory = new TencentFormFactory();
+            tencentFormFactory.createForm(application);
+        }
     }
 }
