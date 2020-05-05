@@ -1,7 +1,7 @@
 package createPattern.BuilderPattern;
 
 /**
- * 指挥官
+ * 指挥官 Director
  */
 public class Worker {
     public Robot buildRobot(BuilderFactory builderFactory){
