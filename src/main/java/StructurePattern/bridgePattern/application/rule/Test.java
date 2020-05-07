@@ -1,9 +1,7 @@
 package StructurePattern.bridgePattern.application.rule;
 
-import createPattern.abstractFactory.formAndTask.create.Application;
-
 public class Test {
-    public static void main(String[] args) {
+    public static void main(java.lang.String[] args) {
         SelfPurchaseRuleImpl selfPurchaseRule = new SelfPurchaseRuleImpl();
         ApplicationDO applicationDO = new ApplicationDO();
         applicationDO.setApplicant("regular");

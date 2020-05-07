@@ -1,7 +1,6 @@
 package StructurePattern.bridgePattern.application.rule;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class SelfPurchaseRuleImpl extends ApplicationRuleAbstract{
     @Override
@@ -24,5 +23,10 @@ public class SelfPurchaseRuleImpl extends ApplicationRuleAbstract{
         }
 
         return true;
+    }
+
+    @Override
+    String routingBpmsCode(ApplicationDO applicationDO) {
+        return null;
     }
 }
