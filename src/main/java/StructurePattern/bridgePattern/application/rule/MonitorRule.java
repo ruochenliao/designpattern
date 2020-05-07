@@ -25,6 +25,19 @@ public class MonitorRule implements AssetRule{
         return true;
     }
 
+    @Override
+    public String getBpmsRule(AssetDO assetDO, ApplicationDO applicationDO) {
+        if("exchange".equals(applicationDO.getApplicationType())){
+            return "123";
+        }
+
+        if("selfPurchase".equals(applicationDO.getApplicationType())){
+            return "321";
+        }
+
+        return null;
+    }
+
     private boolean checkIsInApplication(String assetCode) {
         return false;
     }

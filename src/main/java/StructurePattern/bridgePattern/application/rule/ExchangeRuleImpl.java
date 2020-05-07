@@ -21,4 +21,15 @@ public class ExchangeRuleImpl extends ApplicationRuleAbstract{
         }
         return true;
     }
+
+    @Override
+    String routingBpmsCode(ApplicationDO applicationDO) {
+        //mock 数据
+        AssetDO assetDO = new AssetDO();
+        assetDO.setAssetCode(applicationDO.getAssetCode());
+        assetDO.setAssetType("computer");
+        assetDO.setStartUsingDate(LocalDate.now());
+
+        return assetRule.getBpmsRule(assetDO, applicationDO);
+    }
 }

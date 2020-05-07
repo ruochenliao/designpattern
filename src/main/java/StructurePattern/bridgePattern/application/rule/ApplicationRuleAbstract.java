@@ -9,4 +9,6 @@ public abstract class ApplicationRuleAbstract {
     }
 
     abstract Boolean canSubmitApplication(ApplicationDO applicationDO);
+
+    abstract String routingBpmsCode(ApplicationDO applicationDO);
 }
