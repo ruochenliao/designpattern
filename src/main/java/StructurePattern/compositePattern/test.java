@@ -1,6 +1,8 @@
 package StructurePattern.compositePattern;
 
 /**
+ * 组合模式
+ *
  * 使用场景
  * 树形结构，比如常用来做目录
  *

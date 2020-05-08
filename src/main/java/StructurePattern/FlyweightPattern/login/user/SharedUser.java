@@ -31,7 +31,7 @@ public class SharedUser implements User {
     @Override
     public String getBpmsLink(String formId, String formType) {
         if (user == null) {
-            return null;
+            return "无法获取审批链接";
         }
         return user.getBpmsLink(formId, formType);
     }
