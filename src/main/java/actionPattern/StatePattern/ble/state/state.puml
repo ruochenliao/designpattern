@@ -1,0 +1,17 @@
+@startuml
+State idle
+State lost
+State unUsed
+State active
+
+active --> idle :解绑
+active --> lost: 丢失信号
+lost --> unUsed: 解绑
+idle --> unUsed: 丢失信号
+
+idle --> active :绑定
+lost --> active: 重新连接
+unUsed --> lost: 绑定
+unUsed --> idle: 连接
+
+@enduml
