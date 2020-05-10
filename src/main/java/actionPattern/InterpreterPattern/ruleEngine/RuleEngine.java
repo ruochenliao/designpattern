@@ -12,12 +12,12 @@ public class RuleEngine {
         for (int i = 0; i < operations.length; i++) {
             if ("and".equalsIgnoreCase(operations[i])) {
                 left = temp;
-                right = new ValueNode(Boolean.valueOf(operations[i + 1]));
+                right = new ValueNode(Boolean.valueOf(operations[++i]));
                 AndNode andNode = new AndNode(left, right);
                 temp = new ValueNode(andNode.interpret());
             } else if ("or".equalsIgnoreCase(operations[i])) {
                 left = temp;
-                right = new ValueNode(Boolean.valueOf(operations[i + 1]));
+                right = new ValueNode(Boolean.valueOf(operations[++i]));
                 OrNode orNode = new OrNode(left, right);
                 temp = new ValueNode(orNode.interpret());
             } else {
