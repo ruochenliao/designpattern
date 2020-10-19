@@ -2,8 +2,8 @@ package createPattern.Factory;
 
 /**
  * factory pattern 工厂模式
- * 工厂的子类负责具体的创建具体的产品
- * 工厂模式可以造出一种商品，商品可以根据工厂的不同，每个工厂可以造出一种维度的变化
+ *
+ * 多个维度风格的工厂构建多维度的不同产品( Benz 工厂生产 Benz 牌汽车，BYD 生产 BYD 牌汽车)
  */
 public class Test {
     public static void main(String[] args){

@@ -1,7 +1,7 @@
 package createPattern.singleton;
 
 /**
- * 饿汉式单利模式
+ * 饿汉单例模式
  */
 public class SingletonHungryFactory {
 

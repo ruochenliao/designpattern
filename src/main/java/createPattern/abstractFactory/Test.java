@@ -2,7 +2,7 @@ package createPattern.abstractFactory;
 
 /**
  * abstract factory pattern 抽象工厂类
- * 工厂可以造出多种商品，每种物品又可以有根据不同的工厂类，造出一种维度的变化
+ * 工厂可以造出多种商品，不同风格的工厂可以构建不同风格的产品, 可以有一种维度风格的变化
  *
  */
 public class Test {

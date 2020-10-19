@@ -2,7 +2,7 @@ package createPattern.simpleFactory;
 
 /**
  * simple factory pattern 简单工厂
- * 可以造出一种商品，这种商品可以造出一种维度的变化
+ * 一个工厂可以构建各种各样的产品
  */
 public class Test {
     public static void main(String[] args){
